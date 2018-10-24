@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-workshop",
+  "version": "1.0.0",
+  "description": "Nuxt CF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt"
+  },
+  "keywords": [
+    "Nuxt"
+  ],
+  "author": "emmanuelsw",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nuxt": "^2.2.0"
+  }
+}
