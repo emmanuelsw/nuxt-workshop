@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h1>Albums de la página</h1>
-    <AlbumCard :album="album" v-for="album in albums" :key="album.id" />
+  <div class="container">
+    <h1 class="title">Albums de la página</h1>
+    <div class="columns is-multiline">
+      <AlbumCard :album="album" v-for="album in albums" :key="album.id" />
+    </div>
   </div>
 </template>
 
@@ -30,5 +32,8 @@ export default {
 </script>
 
 <style scoped>
-
+h1 {
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
 </style>

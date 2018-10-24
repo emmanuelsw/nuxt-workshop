@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
+import '../node_modules/bulma/css/bulma.css'
+
 
 import _6f6c098b from './layouts/default.vue'
 
