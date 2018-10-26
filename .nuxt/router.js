@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+const _cb8e8e9e = () => import('../pages/albums/_id.vue' /* webpackChunkName: "pages/albums/_id" */).then(m => m.default || m)
 const _726bdba0 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 Vue.use(Router)
@@ -62,6 +63,11 @@ export function createRouter () {
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
     routes: [
+		{
+			path: "/albums/:id?",
+			component: _cb8e8e9e,
+			name: "albums-id"
+		},
 		{
 			path: "/",
 			component: _726bdba0,
