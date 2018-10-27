@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import router from 'vue-router'
 import axios from 'axios'
 import env from '../../config/env'
 

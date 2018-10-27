@@ -22,11 +22,9 @@ export default {
       albums: []
     }
   },
-  created() {
-    axios.get(`${env.endpoint}/albums`)
-    .then(response => {
-      this.albums = response.data
-    })
+  async asyncData ({ req, res }) {
+    let { data } = await axios.get(`${env.endpoint}/albums`)
+    return { albums: data }
   }
 }
 </script>

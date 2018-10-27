@@ -3,6 +3,8 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '../node_modules/bulma/css/bulma.css'
 
+import '../assets/style.css'
+
 
 import _6f6c098b from './layouts/default.vue'
 
@@ -11,7 +13,7 @@ const layouts = { "_default": _6f6c098b }
 
 
 export default {
-  head: {"meta":[],"link":[],"style":[],"script":[]},
+  head: {"title":"Nuxt CF","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')
