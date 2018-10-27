@@ -29,17 +29,14 @@ export default {
       photos: []
     }
   },
-  created() {
-    let albumId = this.$route.params.id
-    axios.get(`${env.endpoint}/albums/${albumId}`)
-    .then(response => {
-      this.album = response.data
-    })
+  async asyncData ({ params }) {
+    let album = await axios.get(`${env.endpoint}/albums/${params.id}`)
+    let photos = await axios.get(`${env.endpoint}/albums/${params.id}/photos`)
 
-    axios.get(`${env.endpoint}/albums/${albumId}/photos`)
-    .then(photoRes => {
-      this.photos = photoRes.data
-    })
+    return { 
+      album: album.data,
+      photos: photos.data
+    }
   }
 }
 </script>
